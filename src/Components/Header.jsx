@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { AuthContext } from "./AuthContext";
 
+import { NavLink } from "react-router-dom";
+
 export default function Header() {
   const [isAuth, setIsAuth] = useContext(AuthContext);
 
@@ -12,8 +14,14 @@ export default function Header() {
         height: "80px",
       }}
     >
+      {isAuth ? (
+        <div>
+          <NavLink to="/">Dashboard</NavLink>
+          <NavLink to="/users">Users</NavLink>
+          <NavLink to="/workshops">Workshops</NavLink>
+        </div>
+      ) : null}
       <button onClick={() => setIsAuth(!isAuth)}>Log IN</button>
-      <h1>{isAuth ? "Logged In" : "Logged Out"}</h1>
     </div>
   );
 }
