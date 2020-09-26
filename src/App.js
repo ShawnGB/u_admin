@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 import PrivateRoute from "./Components/01_Auth_Login/PrivateRoute";
 import { AuthContext } from "./Components/01_Auth_Login/AuthContext";

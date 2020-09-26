@@ -1,5 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+input [type="button"] {
+  height: 20px;
+  background-color: #009d90;
+}
+
+.Header {
+  height: 4em;
+  width: 100vw;
+  background-color: #009d90;
+}
+
+.NavLink {
+  text-decoration: none;
+  margin: 0.7em;
+  height: 36px;
+  color: #ffffff;
 }
