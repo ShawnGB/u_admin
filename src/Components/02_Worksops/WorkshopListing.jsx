@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import UsersListing from "../Components/03_Users/UsersListing";
 
-export default function Users() {
+export default function WorkshopListing() {
   const [users, setUsers] = useState();
 
   useEffect(() => {
@@ -17,14 +16,18 @@ export default function Users() {
       });
   }, []);
 
+  console.log(users);
   return (
-    <div style={{ height: "70vh" }}>
-      <div style={{ height: "4em", allingItems: "center" }}>
-        <input type="button" value="Add User" style={{}} />
-      </div>
-      <div>
-        <UsersListing users={users} />
-      </div>
+    <div style={{ width: "100%" }}>
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
     </div>
   );
 }

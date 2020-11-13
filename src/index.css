@@ -6,9 +6,20 @@
   font-family: "Roboto", sans-serif;
 }
 
+/* table styles */
+
 table {
   width: 100%;
   align-items: center;
+}
+
+tr {
+  height: 2em;
+}
+
+th,
+td {
+  text-align: center;
 }
 
 input [type="button"] {
