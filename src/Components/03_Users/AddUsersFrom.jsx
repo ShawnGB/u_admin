@@ -3,14 +3,16 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 
 export default function AddUsersFrom({ closeDialog }) {
-  const { register, handleSubmit, errors } = useForm();
+  const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
     axios
-      .post("http://localhost:8000/users", { data })
+      .post("http://localhost:8000/users", {
+        FirstName: data.FirstName,
+        LastName: data.LastName,
+        Instructor: data.Instructor,
+      })
       .then((res) => {
-        console.log(res);
         console.log(res.data);
       })
       .then(closeDialog());
@@ -47,7 +49,6 @@ export default function AddUsersFrom({ closeDialog }) {
           display: "block",
           width: "70%",
           margin: "2em 0 3em 0",
-          margin: "0 auto",
         }}
       >
         <input
@@ -55,6 +56,9 @@ export default function AddUsersFrom({ closeDialog }) {
           placeholder="Instructor"
           name="Instructor"
           ref={register}
+          style={{
+            margin: "0 auto",
+          }}
         />
         <p>Is Instructor?</p>
       </label>
