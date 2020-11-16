@@ -4,7 +4,7 @@ import { Route, Redirect } from "react-router-dom";
 export default function PrivateRoute({ component: Component, ...rest }) {
   return (
     <React.Fragment>
-      <Redirect to="/" />
+      <Redirect to="/users" />
       <Route
         {...rest}
         render={(props) =>
